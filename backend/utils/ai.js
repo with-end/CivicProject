@@ -44,11 +44,11 @@ async function classifyDepartment(description) {
 // 2. Generate text embeddings
 async function generateTextVector(text) {
   try {
-    const model = genAI.getGenerativeModel({ model: "text-embedding-004" }); // ✅ new embedding model
+    const model = genAI.getGenerativeModel({ model: "gemini-embedding-001" }); // ✅ new embedding model
     const result = await model.embedContent(text);
     return result.embedding.values; // embedding array
   } catch (err) {
-    console.error("Text embedding failed:", err.response?.data || err.message);
+    console.error("Text embedding failed:", err || err.message);
     return [];
   }
 }

@@ -1,26 +1,29 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
-import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
 import Input from "../components/input.jsx";
 import googleIcon from "../assets/googleIcon.svg";
 import { googleAuth } from "../utils/firebase.js";
-import { useSelector, useDispatch } from "react-redux";
-import { setEmail, clearEmail } from "../store/authSlice";
+import { setEmail } from "../store/authSlice";
+
 
 function Authe(props) {
-  const [userData, setUserData] = useState({ name: "", email: "", password: "" });
+  const [userData, setUserData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+
   async function handleAuthForm(e) {
     e.preventDefault();
-    try {
-      // const res = await axios.post(
-      //   `${import.meta.env.VITE_BACKEND_URL}/${props.type}`,
-      //   userData
-      // );
 
+    try {
       if (props.type === "signup") {
         toast.success(res.data.message);
         navigate("/signin");
@@ -32,18 +35,22 @@ function Authe(props) {
       console.log(err);
       toast.error(err?.response?.data?.message || "Something went wrong");
     } finally {
-      setUserData({ name: "", email: "", password: "" });
+      setUserData({
+        name: "",
+        email: "",
+        password: "",
+      });
     }
   }
+
 
   async function handleGoogleAuth() {
     try {
       const data = await googleAuth();
-      console.log(data) ;
+
+      console.log(data);
       dispatch(setEmail(data.email));
-       // const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/google-auth`, {
-      //   accessToken: data.accessToken,
-      // });
+
       toast.success("Google login successful");
       navigate("/public");
     } catch (err) {
@@ -51,6 +58,7 @@ function Authe(props) {
       toast.error(err?.response?.data?.message || "Google login failed");
     }
   }
+
 
   return (
     <div className="min-h-[calc(100vh_-70px)] flex items-center justify-center bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 p-4">
@@ -97,29 +105,44 @@ function Authe(props) {
           </button>
         </form>
 
-        <p className="text-center font-medium text-gray-700">or</p>
+        <p className="text-center font-medium text-gray-700">
+          or
+        </p>
 
         <div
           onClick={handleGoogleAuth}
           className="w-full py-2 rounded-xl bg-white border flex justify-center items-center gap-3 cursor-pointer
                      hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-500 hover:text-white transition-all"
         >
-          <img src={googleIcon} alt="Google" className="w-6 h-6" />
-          <span className="font-semibold">Continue with Google</span>
+          <img
+            src={googleIcon}
+            alt="Google"
+            className="w-6 h-6"
+          />
+
+          <span className="font-semibold">
+            Continue with Google
+          </span>
         </div>
 
         <p className="text-center text-gray-700 mt-2">
           {props.type === "signup" ? (
             <>
               Already have an account?{" "}
-              <Link to="/public/signin" className="text-indigo-700 font-semibold">
+              <Link
+                to="/public/signin"
+                className="text-indigo-700 font-semibold"
+              >
                 Sign In
               </Link>
             </>
           ) : (
             <>
               Don't have an account?{" "}
-              <Link to="/public/signup" className="text-indigo-700 font-semibold">
+              <Link
+                to="/public/signup"
+                className="text-indigo-700 font-semibold"
+              >
                 Sign Up
               </Link>
             </>
@@ -129,5 +152,6 @@ function Authe(props) {
     </div>
   );
 }
+
 
 export default Authe;

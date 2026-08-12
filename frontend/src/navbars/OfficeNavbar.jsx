@@ -1,15 +1,15 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Home, FileText, Bell, LogOut, User } from "lucide-react";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
 
-export default function Navbar({isLoggedIn , mode , onLogout , variable }) {
+export default function Navbar({ isLoggedIn, mode, onLogout, variable }) {
   const { i18n } = useTranslation();
   const navigate = useNavigate();
-  
 
   const handleChange = (e) => {
     const department = e.target.value;
+
     if (department) {
       navigate(`/department/${department}`);
     }
@@ -20,25 +20,27 @@ export default function Navbar({isLoggedIn , mode , onLogout , variable }) {
   };
 
   return (
-    <nav className="bg-white shadow-md border-b-4 border-blue-600 px-6 py-4 flex justify-between items-center">
-      {/* Logo + Title */}
+    <nav className="bg-white shadow-md border-b-4 bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-500 px-6 py-4 flex justify-between items-center">
       <div className="flex items-center gap-2">
         <span className="text-2xl">🏛️</span>
-        <h1 className="text-xl font-bold text-blue-800">
-          {mode === "office" ? "Admin Dashboard" : "Department Dashboard" }
+
+        <h1 className="text-xl font-bold text-white">
+          {mode === "office"
+            ? "Admin Dashboard"
+            : "Department Dashboard"}
         </h1>
       </div>
 
-      {/* Right Side Menu */}
       <div>
         {isLoggedIn ? (
           <div className="flex gap-4">
             <Link
-              to={`/${mode=="office" ? "office" : "department/x"}/login`}
+              to={`/${mode === "office" ? "office" : "department/x"}/login`}
               className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
             >
               Login
             </Link>
+
             <Link
               to="/"
               className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700"
@@ -50,20 +52,21 @@ export default function Navbar({isLoggedIn , mode , onLogout , variable }) {
           <ul className="flex items-center gap-6 text-gray-700 font-medium">
             <Link
               to="/"
-              className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700"
+              className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-lg hover:bg-green-700"
             >
               ComeOut
             </Link>
+
             <li>
               <Link
-                to={mode=="office" ? `/${mode}` : `/${mode}/${variable}` }
+                to={mode === "office" ? `/${mode}` : `/${mode}/${variable}`}
                 className="flex items-center gap-1 hover:text-blue-700"
               >
-                <Home size={18} /> Home
+                <Home size={18} />
+                Home
               </Link>
             </li>
 
-            {/* ✅ Show Department Dropdown only in OFFICE mode */}
             {mode === "office" && (
               <li>
                 <select
@@ -84,45 +87,54 @@ export default function Navbar({isLoggedIn , mode , onLogout , variable }) {
 
             <li>
               <Link
-                to={mode=="office" ? `/${mode}/map` :  `/${mode}/${variable}/map`}
+                to={
+                  mode === "office"
+                    ? `/${mode}/map`
+                    : `/${mode}/${variable}/map`
+                }
                 className="flex items-center gap-1 hover:text-blue-700"
               >
-                <FileText size={18} /> Map
+                <FileText size={18} />
+                Map
               </Link>
             </li>
+
             <li>
               <Link
-                to={mode=="office" ? `/${mode}/notices` : `/${mode}/${variable}/notices`}
+                to={
+                  mode === "office"
+                    ? `/${mode}/notices`
+                    : `/${mode}/${variable}/notices`
+                }
                 className="flex items-center gap-1 hover:text-blue-700"
               >
-                <Bell size={18} /> Notice
+                <Bell size={18} />
+                Notice
               </Link>
             </li>
+
             <li>
               <Link
-                to={mode=="office" ? `/${mode}/officers` : `/${mode}/${variable}/officers`}
+                to={
+                  mode === "office"
+                    ? `/${mode}/officers`
+                    : `/${mode}/${variable}/officers`
+                }
                 className="flex items-center gap-1 hover:text-blue-700"
               >
-                <User size={18} /> Officer Info
+                <User size={18} />
+                Officer Info
               </Link>
             </li>
+
             <li>
               <button
                 onClick={onLogout}
                 className="flex items-center gap-1 text-red-600 hover:text-red-700"
               >
-                <LogOut size={18} /> Logout
+                <LogOut size={18} />
+                Logout
               </button>
-              <select
-                onChange={changeLanguage}
-                defaultValue="en"
-                className="mt-2 w-full border px-2 py-1 rounded bg-white text-indigo-600 font-medium"
-              >
-                <option value="en">English</option>
-                <option value="hi">हिंदी</option>
-                <option value="ta">தமிழ்</option>
-                <option value="bn">বাংলা</option>
-              </select>
             </li>
           </ul>
         )}

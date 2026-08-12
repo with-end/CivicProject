@@ -4,44 +4,70 @@ import axios from "axios";
 
 
 export default function NagarPalikaLogin() {
-  const [loginType, setLoginType] = useState(""); // "main" or "department"
+  const [loginType, setLoginType] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [department, setDepartment] = useState("");
   const [category, setCategory] = useState("");
-  const nagarId = localStorage.getItem("nagarId") ;
 
+  const nagarId = localStorage.getItem("nagarId");
   const navigate = useNavigate();
+
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    if (!loginType) return alert("Please select login type");
+
+    if (!loginType) {
+      return alert("Please select login type");
+    }
 
     try {
       const body =
         loginType === "main"
-          ? { email: username, password, role: "main" }
-          : { email: username, password, department, role: category };
+          ? {
+              email: username,
+              password,
+              role: "main",
+            }
+          : {
+              email: username,
+              password,
+              department,
+              role: category,
+            };
 
-      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/auth/${nagarId}`, body);
-      
-      if (loginType === "main") navigate("/office");
-      else if( category=="head" ) navigate(`/department/${department}`);
-      else navigate("/verify", { state: { officer : res.data.officer } });
+      const res = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/auth/${nagarId}`,
+        body
+      );
+
+      if (loginType === "main") {
+        navigate("/office");
+      } else if (category == "head") {
+        navigate(`/department/${department}`);
+      } else {
+        navigate("/verify", {
+          state: {
+            officer: res.data.officer,
+          },
+        });
+      }
     } catch (err) {
       console.error(err);
       alert("Login failed. Please check credentials.");
     }
   };
 
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 p-1 lg:p-4 md:p-2">
       <div className="bg-white shadow-2xl rounded-3xl w-full max-w-md p-4 lg:p-8 md:p-8">
+
         <h2 className="text-3xl font-extrabold text-gray-800 text-center mb-6">
           MunicipalCouncil Login
         </h2>
 
-        {/* Login type selection */}
+
         {!loginType && (
           <div className="flex flex-col space-y-4 mb-6">
             <button
@@ -50,6 +76,7 @@ export default function NagarPalikaLogin() {
             >
               Main Office
             </button>
+
             <button
               onClick={() => setLoginType("department")}
               className="w-full bg-purple-500 text-white py-2 rounded-xl shadow hover:bg-purple-600 font-semibold"
@@ -59,16 +86,17 @@ export default function NagarPalikaLogin() {
           </div>
         )}
 
-        {/* Login form */}
+
         {loginType && (
           <form className="space-y-4" onSubmit={handleLogin}>
-            {/* Department fields appear only if loginType === "department" */}
+
             {loginType === "department" && (
               <>
                 <div>
                   <label className="block text-gray-700 font-medium mb-1">
                     Department
                   </label>
+
                   <select
                     value={department}
                     onChange={(e) => setDepartment(e.target.value)}
@@ -83,10 +111,12 @@ export default function NagarPalikaLogin() {
                   </select>
                 </div>
 
+
                 <div>
                   <label className="block text-gray-700 font-medium mb-1">
                     Category
                   </label>
+
                   <select
                     value={category}
                     onChange={(e) => setCategory(e.target.value)}
@@ -101,11 +131,14 @@ export default function NagarPalikaLogin() {
               </>
             )}
 
-            {/* Username */}
+
             <div>
               <label className="block text-gray-700 font-medium mb-1">
-                {loginType === "main" ? "Main Office User ID / Email" : "User ID / Email"}
+                {loginType === "main"
+                  ? "Main Office User ID / Email"
+                  : "User ID / Email"}
               </label>
+
               <input
                 type="text"
                 value={username}
@@ -116,11 +149,12 @@ export default function NagarPalikaLogin() {
               />
             </div>
 
-            {/* Password */}
+
             <div>
               <label className="block text-gray-700 font-medium mb-1">
                 Password
               </label>
+
               <input
                 type="password"
                 value={password}
@@ -131,7 +165,7 @@ export default function NagarPalikaLogin() {
               />
             </div>
 
-            {/* Submit button */}
+
             <button
               type="submit"
               className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-2 rounded-xl shadow hover:from-indigo-600 hover:to-purple-600 font-semibold"
@@ -139,7 +173,7 @@ export default function NagarPalikaLogin() {
               Login
             </button>
 
-            {/* Back button */}
+
             <button
               type="button"
               onClick={() => setLoginType("")}
@@ -147,8 +181,10 @@ export default function NagarPalikaLogin() {
             >
               Back to Selection
             </button>
+
           </form>
         )}
+
       </div>
     </div>
   );

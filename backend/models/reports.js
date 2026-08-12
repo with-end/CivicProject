@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const ReportSchema = new mongoose.Schema({
   reporterEmail: { type: String, required: true },
-  department: { type: String }, // decided later by AI
+  department: { type: String }, 
   nagarId : { type: String , required: true } ,
   title: { type: String, required: true },
   description: { type: String, required: true },
@@ -14,7 +14,7 @@ const ReportSchema = new mongoose.Schema({
 
   location: {
     type: { type: String, enum: ["Point"], default: "Point" },
-    coordinates: { type: [Number], required: true } // [lng, lat]
+    coordinates: { type: [Number], required: true } 
   },
 
   status: { type: String, enum: ["inprogress", "approved" , "completed", "pending" ], default: "pending" },
