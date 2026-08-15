@@ -103,7 +103,7 @@ This reduces unnecessary duplicate reports, improves issue routing, helps author
 * Track the status of submitted reports.
 * Upvote existing issues.
 * Receive email notifications when the issue status changes.
-* View issues on a map.
+* View history of reports
 * Access the platform in multiple languages.
 
 ### 🤖 AI-Powered Features
@@ -137,8 +137,6 @@ For example, an issue near a hospital may receive higher priority than a similar
 * Automatically assign issues to suitable workers.
 * Consider worker availability/status.
 * Assign nearby issues efficiently.
-* Group geographically close issues where appropriate.
-* Track worker progress.
 
 ### 🔄 Real-Time Updates
 
@@ -188,6 +186,7 @@ Civic Issue Platform
 The system processes the report and checks:
 
 * Issue details.
+* Validity of report
 * Location.
 * Image.
 * Existing reports.
@@ -205,8 +204,6 @@ The comparison can consider:
 Location
    +
 Description
-   +
-Image
    ↓
 Duplicate Detection
 ```
@@ -218,18 +215,6 @@ If a similar issue already exists, the system can associate the new report with 
 ## 4. Department Assignment
 
 Based on the issue type and geographical location, the report is routed toward the appropriate municipal authority/department.
-
-```text
-Citizen
-   ↓
-Issue
-   ↓
-Location
-   ↓
-Municipal Council
-   ↓
-Relevant Department
-```
 
 ---
 
@@ -275,7 +260,7 @@ Suitable Worker
 
 ## 7. Resolution and Tracking
 
-The worker updates the issue as work progresses.
+The worker aproves the report .
 
 Example:
 
@@ -286,9 +271,9 @@ Under Review
    ↓
 Assigned
    ↓
-In Progress
+approved 
    ↓
-Resolved
+now work on the issue
 ```
 
 The citizen can track these updates through the platform.
@@ -317,8 +302,6 @@ Municipal authorities can:
 * View incoming reports.
 * Manage issues.
 * Review priorities.
-* Assign workers.
-* Monitor ongoing work.
 * Update issue status.
 
 ## 👷 Worker
@@ -328,16 +311,14 @@ Workers can:
 * View assigned issues.
 * See issue locations.
 * Update work status.
-* Mark issues as completed.
+* Mark issues as approved.
 
 ## 🏛️ Government Administrator
 
-Government administrators can:
+Government administrators 
 
-* Monitor issues across municipalities.
-* View overall civic activity.
-* Analyze issue trends.
-* Monitor municipal performance.
+* Adds the munciple council
+* Makes the head of each munciple council
 
 ---
 
@@ -425,20 +406,20 @@ Government administrators can:
 
 ```bash
 git clone <your-repository-url>
-cd Civic-Issue
+cd CivicProject
 ```
 
 ## 2. Install Frontend Dependencies
 
 ```bash
-cd client
+cd ../frontend
 npm install
 ```
 
 ## 3. Install Backend Dependencies
 
 ```bash
-cd ../server
+cd ../backend
 npm install
 ```
 
@@ -449,13 +430,14 @@ Create `.env` files according to the environment variables required by the proje
 ## 5. Start the Backend
 
 ```bash
+cd ../backend
 npm run dev
 ```
 
 ## 6. Start the Frontend
 
 ```bash
-cd ../client
+cd ../frontend
 npm run dev
 ```
 
