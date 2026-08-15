@@ -445,7 +445,7 @@ The application should now be available through the local development server.
 
 ---
 
-# 🔐 Environment Variables
+# Environment Variables
 
 Example:
 
@@ -487,7 +487,7 @@ UPSTASH_TCP_URL =
 
 ---
 
-# 🔮 Future Improvements
+# Future Improvements
 
 Possible future improvements include:
 
