@@ -28,19 +28,12 @@
 * [Key Features](#-key-features)
 * [How It Works](#-how-it-works)
 * [User Roles](#-user-roles)
-* [AI Features](#-ai-features)
-* [Issue Prioritization](#-issue-prioritization)
-* [Automatic Worker Assignment](#-automatic-worker-assignment)
-* [Real-Time System](#-real-time-system)
 * [Technology Stack](#-technology-stack)
 * [System Architecture](#-system-architecture)
 * [Project Structure](#-project-structure)
 * [Installation](#-installation)
 * [Environment Variables](#-environment-variables)
 * [Future Improvements](#-future-improvements)
-* [Contributing](#-contributing)
-* [License](#-license)
-
 ---
 
 ## 🚀 Overview
@@ -349,98 +342,6 @@ Government administrators can:
 
 ---
 
-# 🤖 AI Features
-
-AI is integrated into the platform to reduce manual processing and improve the quality of issue management.
-
-### Duplicate Issue Detection
-
-The system can compare newly submitted reports with existing reports using information such as:
-
-```text
-Description
-Location
-Image
-```
-
-This helps identify when multiple citizens are reporting the same underlying problem.
-
-### Multilingual Processing
-
-The platform supports multiple languages using a combination of static internationalization and AI-based processing for dynamic content.
-
----
-
-# 🚨 Issue Prioritization
-
-One of the important parts of Civic Issue is determining which issues should receive attention first.
-
-A simplified representation is:
-
-```text
-Priority =
-    Location Importance
-    + Community Support
-    + Duplicate Reports
-    + Issue Severity
-```
-
-For example:
-
-```text
-Road Damage near Hospital
-          ↓
-Higher Priority
-```
-
-compared with:
-
-```text
-Road Damage in Low-Traffic Area
-          ↓
-Lower Priority
-```
-
-The exact prioritization logic can be modified according to the requirements of the municipal authority.
-
----
-
-# 👷 Automatic Worker Assignment
-
-Instead of relying completely on manual assignment, the platform can assist authorities by selecting an appropriate worker.
-
-Factors can include:
-
-* Worker availability.
-* Distance from the issue.
-* Existing workload.
-* Current worker status.
-* Geographical clustering of issues.
-
-If multiple issues occur close to each other, they can potentially be assigned to the same worker to reduce unnecessary travel.
-
----
-
-# ⚡ Real-Time System
-
-Real-time communication is used to keep different users synchronized.
-
-```text
-Authority
-    ↓
-Status Update
-    ↓
-Backend
-    ↓
-Real-Time Event
-    ↓
-Citizen Dashboard
-```
-
-This allows users to receive important updates without repeatedly refreshing the page.
-
----
-
 # 🛠️ Technology Stack
 
 ## Frontend
@@ -646,49 +547,3 @@ The main goals of Civic Issue are to:
 7. Improve communication between citizens and government authorities.
 
 ---
-
-# 🤝 Contributing
-
-Contributions are welcome.
-
-If you would like to contribute:
-
-```bash
-# Fork the repository
-
-# Create a new branch
-git checkout -b feature/your-feature
-
-# Make your changes
-
-# Commit your changes
-git commit -m "Add your feature"
-
-# Push the branch
-git push origin feature/your-feature
-```
-
-Then open a Pull Request.
-
----
-
-# 📄 License
-
-This project is developed for educational and portfolio purposes.
-
-Add your preferred license here if the repository uses one.
-
----
-
-# 👨‍💻 Author
-
-**Your Name**
-
-* GitHub: `<your-github-profile>`
-* LinkedIn: `<your-linkedin-profile>`
-
----
-
-## ⭐ If you found this project interesting
-
-Consider giving the repository a ⭐ on GitHub!
