@@ -69,13 +69,13 @@ Civic Issue provides an intelligent workflow:
 ```text
 Citizen
    ↓
+establish connection with corresponding muncipal counsil
+   ↓
 Reports Civic Issue
    ↓
-AI + Location Processing
+check validity and department identification
    ↓
 Duplicate Detection
-   ↓
-Department Identification
    ↓
 Priority Calculation
    ↓
