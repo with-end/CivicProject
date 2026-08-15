@@ -494,11 +494,7 @@ Possible future improvements include:
 * Mobile application.
 * Advanced civic analytics.
 * More sophisticated AI-based issue classification.
-* Predictive identification of recurring civic problems.
 * Advanced worker route optimization.
-* Automated government reports.
-* Better geospatial analysis.
-* Integration with official municipal APIs.
 * Citizen reputation/reward mechanisms.
 * More advanced notification channels.
 
