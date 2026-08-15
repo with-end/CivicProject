@@ -534,16 +534,3 @@ Possible future improvements include:
 
 ---
 
-# 🎯 Project Goals
-
-The main goals of Civic Issue are to:
-
-1. Make civic issue reporting easier for citizens.
-2. Reduce duplicate complaints.
-3. Automatically route issues to the appropriate authorities.
-4. Help authorities prioritize important problems.
-5. Improve worker assignment.
-6. Provide transparency through real-time tracking.
-7. Improve communication between citizens and government authorities.
-
----
