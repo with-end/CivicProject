@@ -405,7 +405,7 @@ Government administrators
 ## 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
+git clone <https://github.com/with-end/CivicProject.git>
 cd CivicProject
 ```
 
