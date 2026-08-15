@@ -22,17 +22,18 @@
 
 ## Table of Contents
 
-* [Overview](#-overview)
-* [Problem Statement](#-problem-statement)
-* [Our Solution](#-our-solution)
-* [Key Features](#-key-features)
-* [How It Works](#-how-it-works)
-* [User Roles](#-user-roles)
-* [Technology Stack](#-technology-stack)
-* [System Architecture](#-system-architecture)
-* [Installation](#-installation)
-* [Environment Variables](#-environment-variables)
-* [Future Improvements](#-future-improvements)
+* [Overview](#overview)
+* [Problem Statement](#problem-statement)
+* [Our Solution](#our-solution)
+* [Key Features](#key-features)
+* [How It Works](#how-it-works)
+* [User Roles](#user-roles)
+* [Technology Stack](#technology-stack)
+* [System Architecture](#system-architecture)
+* [Installation](#installation)
+* [Environment Variables](#environment-variables)
+* [Future Improvements](#future-improvements)
+
 ---
 
 ## Overview
@@ -94,7 +95,7 @@ This reduces unnecessary duplicate reports, improves issue routing, helps author
 
 ---
 
-# Key Features
+## Key Features
 
 ### 👤 Citizen Features
 
@@ -103,7 +104,7 @@ This reduces unnecessary duplicate reports, improves issue routing, helps author
 * Track the status of submitted reports.
 * Upvote existing issues.
 * Receive email notifications when the issue status changes.
-* View history of reports
+* View history of reports.
 * Access the platform in multiple languages.
 
 ### 🤖 AI-Powered Features
@@ -163,9 +164,9 @@ The application supports multilingual interaction through:
 
 ---
 
-# How It Works
+## How It Works
 
-## 1. Citizen Reports an Issue
+### 1. Citizen Reports an Issue
 
 The citizen provides:
 
@@ -181,12 +182,12 @@ Civic Issue Platform
 
 ---
 
-## 2. Issue Processing
+### 2. Issue Processing
 
 The system processes the report and checks:
 
 * Issue details.
-* Validity of report
+* Validity of report.
 * Location.
 * Image.
 * Existing reports.
@@ -194,7 +195,7 @@ The system processes the report and checks:
 
 ---
 
-## 3. Duplicate Detection
+### 3. Duplicate Detection
 
 The system searches for existing reports that may represent the same real-world problem.
 
@@ -212,13 +213,13 @@ If a similar issue already exists, the system can associate the new report with 
 
 ---
 
-## 4. Department Assignment
+### 4. Department Assignment
 
 Based on the issue type and geographical location, the report is routed toward the appropriate municipal authority/department.
 
 ---
 
-## 5. Priority Calculation
+### 5. Priority Calculation
 
 The system evaluates different factors to determine the importance of an issue.
 
@@ -238,7 +239,7 @@ Higher-priority issues can then be handled before less critical issues.
 
 ---
 
-## 6. Worker Assignment
+### 6. Worker Assignment
 
 After an issue reaches the appropriate authority, it can be assigned to a suitable worker.
 
@@ -258,9 +259,9 @@ Suitable Worker
 
 ---
 
-## 7. Resolution and Tracking
+### 7. Resolution and Tracking
 
-The worker aproves the report .
+The worker aproves the report.
 
 Example:
 
@@ -271,7 +272,7 @@ Under Review
    ↓
 Assigned
    ↓
-approved 
+approved
    ↓
 now work on the issue
 ```
@@ -280,11 +281,11 @@ The citizen can track these updates through the platform.
 
 ---
 
-# User Roles
+## User Roles
 
 The platform consists of multiple interfaces.
 
-## 👤 Citizen
+### 👤 Citizen
 
 Citizens can:
 
@@ -295,7 +296,7 @@ Citizens can:
 * Upvote issues.
 * Receive notifications.
 
-## 🏢 Municipal Authority
+### 🏢 Municipal Authority
 
 Municipal authorities can:
 
@@ -304,7 +305,7 @@ Municipal authorities can:
 * Review priorities.
 * Update issue status.
 
-## 👷 Worker
+### 👷 Worker
 
 Workers can:
 
@@ -313,18 +314,18 @@ Workers can:
 * Update work status.
 * Mark issues as approved.
 
-## 🏛️ Government Administrator
+### 🏛️ Government Administrator
 
-Government administrators 
+Government administrators:
 
-* Adds the munciple council
-* Makes the head of each munciple council
+* Add the municipal council.
+* Make the head of each municipal council.
 
 ---
 
-# Technology Stack
+## Technology Stack
 
-## Frontend
+### Frontend
 
 * React.js
 * Vite
@@ -333,25 +334,25 @@ Government administrators
 * Leaflet / React Leaflet
 * i18n
 
-## Backend
+### Backend
 
 * Node.js
 * Express.js
 * Socket.IO
 
-## Database & Storage
+### Database & Storage
 
 * MongoDB
 * Redis
 * Cloudinary
 
-## AI
+### AI
 
 * Generative AI / LLM APIs
 * AI-based duplicate detection
 * AI-assisted multilingual processing
 
-## Authentication & Services
+### Authentication & Services
 
 * Firebase
 * JWT
@@ -359,7 +360,7 @@ Government administrators
 
 ---
 
-# System Architecture
+## System Architecture
 
 ```text
                     ┌──────────────────┐
@@ -400,41 +401,41 @@ Government administrators
 
 ---
 
-# Installation
+## Installation
 
-## 1. Clone the Repository
+### 1. Clone the Repository
 
 ```bash
-git clone <https://github.com/with-end/CivicProject.git>
+git clone https://github.com/with-end/CivicProject.git
 cd CivicProject
 ```
 
-## 2. Install Frontend Dependencies
+### 2. Install Frontend Dependencies
 
 ```bash
 cd ../frontend
 npm install
 ```
 
-## 3. Install Backend Dependencies
+### 3. Install Backend Dependencies
 
 ```bash
 cd ../backend
 npm install
 ```
 
-## 4. Configure Environment Variables
+### 4. Configure Environment Variables
 
 Create `.env` files according to the environment variables required by the project.
 
-## 5. Start the Backend
+### 5. Start the Backend
 
 ```bash
 cd ../backend
 npm run dev
 ```
 
-## 6. Start the Frontend
+### 6. Start the Frontend
 
 ```bash
 cd ../frontend
@@ -445,49 +446,49 @@ The application should now be available through the local development server.
 
 ---
 
-# Environment Variables
+## Environment Variables
 
 Example:
 
 ```env
-PORT = 
-DB_URL =
+PORT=
+DB_URL=
 
-CLOUDINARY_CLOUD_NAME = 
-CLOUDINARY_API_KEY = 
-CLOUDINARY_API_SECRET = 
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
 
-JWT_SECRET = 
+JWT_SECRET=
 
-OPENROUTER_API_KEY = 
-GEMINI_API_KEY =
-SERVAM_API_KEY =
+OPENROUTER_API_KEY=
+GEMINI_API_KEY=
+SERVAM_API_KEY=
 
-EMAIL_HOST =  
-EMAIL_PORT =  
-EMAIL_USER = 
-EMAIL_PASS = 
+EMAIL_HOST=
+EMAIL_PORT=
+EMAIL_USER=
+EMAIL_PASS=
 
-FIREBASE_TYPE = 
-FIREBASE_PROJECT_ID =
-FIREBASE_PRIVATE_KEY_ID = 
-FIREBASE_PRIVATE_KEY =
-FIREBASE_CLIENT_EMAIL =
-FIREBASE_CLIENT_ID = 
-FIREBASE_AUTH_URI = 
-FIREBASE_TOKEN_URI =  
-FIREBASE_AUTH_PROVIDER_X509_CERT_URL = 
-FIREBASE_CLIENT_X509_CERT_URL = 
-FIREBASE_UNIVERSE_DOMAIN = 
+FIREBASE_TYPE=
+FIREBASE_PROJECT_ID=
+FIREBASE_PRIVATE_KEY_ID=
+FIREBASE_PRIVATE_KEY=
+FIREBASE_CLIENT_EMAIL=
+FIREBASE_CLIENT_ID=
+FIREBASE_AUTH_URI=
+FIREBASE_TOKEN_URI=
+FIREBASE_AUTH_PROVIDER_X509_CERT_URL=
+FIREBASE_CLIENT_X509_CERT_URL=
+FIREBASE_UNIVERSE_DOMAIN=
 
-FRONTEND_URL =
+FRONTEND_URL=
 
-UPSTASH_TCP_URL =
+UPSTASH_TCP_URL=
 ```
 
 ---
 
-# Future Improvements
+## Future Improvements
 
 Possible future improvements include:
 
@@ -497,6 +498,3 @@ Possible future improvements include:
 * Advanced worker route optimization.
 * Citizen reputation/reward mechanisms.
 * More advanced notification channels.
-
----
-
