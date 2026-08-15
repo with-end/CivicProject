@@ -452,8 +452,6 @@ The application should now be available through the local development server.
 
 ## Environment Variables
 
-Example:
-
 ```env
 PORT=
 DB_URL=
