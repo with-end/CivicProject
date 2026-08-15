@@ -30,7 +30,6 @@
 * [User Roles](#-user-roles)
 * [Technology Stack](#-technology-stack)
 * [System Architecture](#-system-architecture)
-* [Project Structure](#-project-structure)
 * [Installation](#-installation)
 * [Environment Variables](#-environment-variables)
 * [Future Improvements](#-future-improvements)
@@ -417,32 +416,6 @@ Government administrators can:
         │     Workers      │
         └──────────────────┘
 ```
-
----
-
-# 📁 Project Structure
-
-```text
-Civic-Issue/
-│
-├── client/
-│   ├── src/
-│   ├── public/
-│   └── ...
-│
-├── server/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   ├── services/
-│   └── ...
-│
-├── README.md
-└── ...
-```
-
-> Update this section according to your actual folder structure.
 
 ---
 
