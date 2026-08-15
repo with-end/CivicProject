@@ -1,4 +1,4 @@
-# 🏛️ Civic Issue
+# Civic Issue
 
 ### AI-Powered Civic Issue Reporting and Management Platform
 
@@ -6,7 +6,7 @@
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 <!-- Add your project screenshots/GIFs here -->
 
@@ -20,7 +20,7 @@
 
 ---
 
-## 📌 Table of Contents
+## Table of Contents
 
 * [Overview](#-overview)
 * [Problem Statement](#-problem-statement)
@@ -35,7 +35,7 @@
 * [Future Improvements](#-future-improvements)
 ---
 
-## 🚀 Overview
+## Overview
 
 Civic Issue is a full-stack civic management platform designed to improve the way public issues are reported, processed, assigned, and resolved.
 
@@ -45,7 +45,7 @@ The platform provides separate interfaces for citizens, municipal authorities, w
 
 ---
 
-## ❗ Problem Statement
+## Problem Statement
 
 Traditional civic issue reporting systems face several challenges:
 
@@ -62,7 +62,7 @@ Civic Issue aims to address these problems through automation, AI, location inte
 
 ---
 
-## 💡 Our Solution
+## Our Solution
 
 Civic Issue provides an intelligent workflow:
 
@@ -94,7 +94,7 @@ This reduces unnecessary duplicate reports, improves issue routing, helps author
 
 ---
 
-# ✨ Key Features
+# Key Features
 
 ### 👤 Citizen Features
 
@@ -163,7 +163,7 @@ The application supports multilingual interaction through:
 
 ---
 
-# 🔄 How It Works
+# How It Works
 
 ## 1. Citizen Reports an Issue
 
@@ -280,7 +280,7 @@ The citizen can track these updates through the platform.
 
 ---
 
-# 👥 User Roles
+# User Roles
 
 The platform consists of multiple interfaces.
 
@@ -322,7 +322,7 @@ Government administrators
 
 ---
 
-# 🛠️ Technology Stack
+# Technology Stack
 
 ## Frontend
 
@@ -359,7 +359,7 @@ Government administrators
 
 ---
 
-# 🏗️ System Architecture
+# System Architecture
 
 ```text
                     ┌──────────────────┐
@@ -400,7 +400,7 @@ Government administrators
 
 ---
 
-# ⚙️ Installation
+# Installation
 
 ## 1. Clone the Repository
 
