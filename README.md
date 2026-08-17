@@ -12,7 +12,7 @@
 
 | Citizen Dashboard | Issue Reporting | Issue Tracking |
 | :---: | :---: | :---: |
-| <img src="screenshots/citizen.png" alt="Citizen Dashboard" width="300"> | <img src="screenshots/report.png" alt="Issue Reporting" width="300"> | <img src="screenshots/track.png" alt="Issue Tracking" width="300"> |
+| <img src="screenshots/worker.png" alt="Citizen Dashboard" width="300"> | <img src="screenshots/report.png" alt="Issue Reporting" width="300"> | <img src="screenshots/track.png" alt="Issue Tracking" width="300"> |
 
 | Municipal Dashboard | Worker Dashboard | Government Dashboard |
 | :---: | :---: | :---: |
