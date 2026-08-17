@@ -8,15 +8,15 @@
 
 ## Screenshots
 
-<!-- Add your project screenshots/GIFs here -->
+<!-- Project Screenshots -->
 
 | Citizen Dashboard | Issue Reporting | Issue Tracking |
-| ----------------- | --------------- | -------------- |
-| Add screenshot    | Add screenshot  | Add screenshot |
+| :---: | :---: | :---: |
+| <img src="screenshots/citizen.png" alt="Citizen Dashboard" width="300"> | <img src="screenshots/report.png" alt="Issue Reporting" width="300"> | <img src="screenshots/track.png" alt="Issue Tracking" width="300"> |
 
 | Municipal Dashboard | Worker Dashboard | Government Dashboard |
-| ------------------- | ---------------- | -------------------- |
-| Add screenshot      | Add screenshot   | Add screenshot       |
+| :---: | :---: | :---: |
+| <img src="screenshots/department.png" alt="Municipal Dashboard" width="300"> | <img src="screenshots/worker.png" alt="Worker Dashboard" width="300"> | <img src="screenshots/stateGov.png" alt="Government Dashboard" width="300"> |
 
 ---
 
